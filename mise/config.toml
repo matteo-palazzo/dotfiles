@@ -14,6 +14,7 @@
 "github:tree-sitter/tree-sitter" = "latest"
 "github:yt-dlp/yt-dlp" = "latest"
 "gitlab:gitlab-org/cli" = "latest"
+"npm:@earendil-works/pi-coding-agent" = "latest"
 "npm:intelephense" = "latest"
 "npm:typescript" = "latest"
 go = "latest"
