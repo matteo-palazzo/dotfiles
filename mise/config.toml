@@ -2,6 +2,7 @@
 "github:BurntSushi/ripgrep" = "latest"
 "github:JohnnyMorganz/StyLua" = "latest"
 "github:LuaLS/lua-language-server" = "latest"
+"github:axllent/mailpit" = "latest"
 "github:cli/cli" = "latest"
 "github:composer/composer" = { version = "latest", bin = "composer" }
 "github:jqlang/jq" = "latest"
