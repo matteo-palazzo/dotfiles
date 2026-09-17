@@ -17,4 +17,4 @@
 "npm:intelephense" = "latest"
 "npm:typescript" = "latest"
 go = "latest"
-node = "lts"
+node = "18"

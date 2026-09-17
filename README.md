@@ -118,6 +118,9 @@ git config --local mr.removeSourceBranch true
 git config --local mr.template <template>
 ```
 
+Se l'editor viene chiuso senza salvare il file, il comando annulla la creazione
+della merge request.
+
 ### git pr
 
 `git pr` crea una pull request GitHub tramite `gh`. Per impostazione predefinita
@@ -134,6 +137,9 @@ disponibile tramite:
 ```bash
 git pr --help
 ```
+
+Se l'editor viene chiuso senza salvare il file, il comando annulla la creazione
+della pull request.
 
 ### git release
 

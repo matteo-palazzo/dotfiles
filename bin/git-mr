@@ -60,6 +60,10 @@ strip_blank_edges() {
     '
 }
 
+file_state() {
+    stat --printf '%d:%i:%s:%y:%z' "$1"
+}
+
 git rev-parse --git-dir >/dev/null 2>&1 || die "not a Git repository"
 command -v glab >/dev/null 2>&1 || die "glab is not installed"
 
@@ -184,8 +188,12 @@ if [[ "$title_supplied" == false ]]; then
 <!-- git-mr: the first line is the title; everything after the blank line is the description -->
 EOF
 
+    initial_message_state="$(file_state "$message_file")"
     read -r -a editor_command <<<"$editor"
     "${editor_command[@]}" "$message_file"
+
+    [[ "$(file_state "$message_file")" != "$initial_message_state" ]] ||
+        die "aborting merge request creation; you did not save the title and description"
 
     title="$(sed -n '1p' "$message_file" | sed 's/[[:space:]]*$//')"
     description="$(sed -e '1d' -e '/^<!-- git-mr:/d' "$message_file" | strip_blank_edges)"

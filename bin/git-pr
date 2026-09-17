@@ -13,7 +13,33 @@ for argument in "$@"; do
 done
 
 if "$use_editor"; then
-    exec gh pr create --editor "$@"
+    original_editor="${GH_EDITOR:-$(git var GIT_EDITOR)}"
+    editor_wrapper="$(mktemp "${TMPDIR:-/tmp}/git-pr-editor.XXXXXX")"
+    trap 'rm -f "$editor_wrapper"' EXIT
+
+    cat >"$editor_wrapper" <<'EOF'
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+file_state() {
+    stat --printf '%d:%i:%s:%y:%z' "$1"
+}
+
+message_file="$1"
+initial_message_state="$(file_state "$message_file")"
+read -r -a editor_command <<<"$GIT_PR_ORIGINAL_EDITOR"
+"${editor_command[@]}" "$@"
+
+if [[ "$(file_state "$message_file")" == "$initial_message_state" ]]; then
+    printf 'Aborting pull request creation; you did not save the title and description.\n' >&2
+    exit 1
+fi
+EOF
+    chmod +x "$editor_wrapper"
+
+    GH_EDITOR="$editor_wrapper" GIT_PR_ORIGINAL_EDITOR="$original_editor" gh pr create --editor "$@"
+    exit $?
 fi
 
 exec gh pr create "$@"
