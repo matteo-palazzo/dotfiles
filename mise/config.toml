@@ -17,5 +17,6 @@
 "npm:@earendil-works/pi-coding-agent" = "latest"
 "npm:intelephense" = "latest"
 "npm:typescript" = "latest"
-go = "latest"
-node = "18"
+"core:go" = "latest"
+"core:node" = "lts"
+"github:anomalyco/opencode" = "latest"

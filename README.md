@@ -22,11 +22,12 @@ Lo script:
 
 1. installa `mise` per l'utente, se non è già disponibile;
 2. collega la configurazione globale di `mise` in `~/.config/mise/config.toml`;
-3. aggiunge l'attivazione di `mise` a `~/.bashrc`, se non è già presente;
-4. installa o aggiorna gli strumenti dichiarati in `mise/config.toml`.
+3. collega la configurazione TUI di OpenCode nella directory di configurazione utente;
+4. aggiunge l'attivazione di `mise` a `~/.bashrc`, se non è già presente;
+5. installa o aggiorna gli strumenti dichiarati in `mise/config.toml`.
 
-La configurazione `mise` esistente viene salvata con suffisso
-`.before-dotfiles` prima di essere sostituita. Lo script può essere eseguito più
+Le configurazioni esistenti vengono salvate con suffisso
+`.before-dotfiles` prima di essere sostituite. Lo script può essere eseguito più
 volte.
 
 Dopo l'installazione, aprire una nuova shell oppure eseguire:
@@ -52,6 +53,7 @@ Attualmente sono gestiti:
 - `lua-language-server`: <https://luals.github.io/>;
 - `neovim`: <https://neovim.io/>;
 - `node`: <https://nodejs.org/>;
+- `opencode`: <https://opencode.ai/>;
 - `rg`: <https://github.com/BurntSushi/ripgrep>;
 - `stylua`: <https://github.com/JohnnyMorganz/StyLua>;
 - `typescript`: <https://www.typescriptlang.org/>;
@@ -73,6 +75,15 @@ mise use --global <strumento>@latest
 
 Dopo il bootstrap, la configurazione globale è un collegamento al file nel
 repository: il comando modifica direttamente `mise/config.toml`.
+
+## OpenCode
+
+Il file [`opencode/tui.json`](opencode/tui.json) seleziona il tema integrato
+`catppuccin`. Il bootstrap lo collega a `~/.config/opencode/tui.json`, oppure a
+`$XDG_CONFIG_HOME/opencode/tui.json` se `XDG_CONFIG_HOME` è impostata.
+
+Per cambiare tema, modificare il campo `theme` e riavviare OpenCode.
+Credenziali e stato locale di OpenCode restano fuori dal repository.
 
 ## Sottocomandi Git
 
