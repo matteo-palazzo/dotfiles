@@ -1,4 +1,8 @@
 {
   "$schema": "https://opencode.ai/tui.json",
-  "theme": "catppuccin"
+  "theme": "catppuccin",
+  "scroll_speed": 0.5,
+  "scroll_acceleration": {
+    "enabled": false
+  }
 }
