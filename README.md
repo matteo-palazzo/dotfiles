@@ -86,7 +86,7 @@ repository: il comando modifica direttamente `mise/config.toml`.
 ## OpenCode
 
 Il file [`opencode/tui.json`](opencode/tui.json) seleziona il tema integrato
-`catppuccin`. Il bootstrap lo collega a `~/.config/opencode/tui.json`, oppure a
+`catppuccin-macchiato`. Il bootstrap lo collega a `~/.config/opencode/tui.json`, oppure a
 `$XDG_CONFIG_HOME/opencode/tui.json` se `XDG_CONFIG_HOME` è impostata.
 
 Per cambiare tema, modificare il campo `theme` e riavviare OpenCode.
