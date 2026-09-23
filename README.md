@@ -21,10 +21,11 @@ cd ~/dev/dotfiles
 Lo script:
 
 1. installa `mise` per l'utente, se non è già disponibile;
-2. collega la configurazione globale di `mise` in `~/.config/mise/config.toml`;
-3. collega la configurazione TUI di OpenCode nella directory di configurazione utente;
-4. aggiunge l'attivazione di `mise` a `~/.bashrc`, se non è già presente;
-5. installa o aggiorna gli strumenti dichiarati in `mise/config.toml`.
+2. collega il file globale di esclusione Git in `~/.gitignore` e lo configura;
+3. collega la configurazione globale di `mise` in `~/.config/mise/config.toml`;
+4. collega la configurazione TUI di OpenCode nella directory di configurazione utente;
+5. aggiunge l'attivazione di `mise` a `~/.bashrc`, se non è già presente;
+6. installa o aggiorna gli strumenti dichiarati in `mise/config.toml`.
 
 Le configurazioni esistenti vengono salvate con suffisso
 `.before-dotfiles` prima di essere sostituite. Lo script può essere eseguito più
@@ -35,6 +36,12 @@ Dopo l'installazione, aprire una nuova shell oppure eseguire:
 ```bash
 source ~/.bashrc
 ```
+
+## Git
+
+Il file [`git/.globalignore`](git/.globalignore) contiene le regole di esclusione valide per
+tutti i repository. Il bootstrap lo collega a `~/.gitignore` e configura
+`core.excludesFile` globalmente.
 
 ## Strumenti gestiti da mise
 

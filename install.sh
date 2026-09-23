@@ -45,11 +45,13 @@ configure_bash() {
 }
 
 install_mise
+backup_and_link "$repository_dir/git/.globalignore" "$HOME/.gitignore"
 backup_and_link "$repository_dir/mise/config.toml" "$HOME/.config/mise/config.toml"
 backup_and_link "$repository_dir/opencode/tui.json" "${XDG_CONFIG_HOME:-$HOME/.config}/opencode/tui.json"
 backup_and_link "$repository_dir/bin/git-mr" "$HOME/.local/bin/git-mr"
 backup_and_link "$repository_dir/bin/git-pr" "$HOME/.local/bin/git-pr"
 backup_and_link "$repository_dir/bin/git-release" "$HOME/.local/bin/git-release"
+git config --global core.excludesFile '~/.gitignore'
 configure_bash
 mise install
 

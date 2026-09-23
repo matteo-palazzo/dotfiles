@@ -1,0 +1,21 @@
+# Local files
+.env.testing
+
+# Editors and IDEs
+.idea/
+.vscode/
+.fleet/
+
+# AI assistants
+.claude/
+.junie/
+.agents/
+.codex/
+.cursor/
+.gemini/
+.opencode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
