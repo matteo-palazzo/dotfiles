@@ -48,6 +48,7 @@ tutti i repository. Il bootstrap lo collega a `~/.gitignore` e configura
 Gli strumenti globali sono dichiarati in [`mise/config.toml`](mise/config.toml).
 Attualmente sono gestiti:
 
+- `aws`: <https://aws.amazon.com/cli/>;
 - `composer`: <https://getcomposer.org/>;
 - `fd`: <https://github.com/sharkdp/fd>;
 - `fzf`: <https://github.com/junegunn/fzf>;
@@ -65,6 +66,7 @@ Attualmente sono gestiti:
 - `stylua`: <https://github.com/JohnnyMorganz/StyLua>;
 - `typescript`: <https://www.typescriptlang.org/>;
 - `tree-sitter`: <https://tree-sitter.github.io/tree-sitter/>;
+- `uv`: <https://docs.astral.sh/uv/>;
 - `yt-dlp`: <https://github.com/yt-dlp/yt-dlp>.
 
 Per installarli o aggiornarli:
