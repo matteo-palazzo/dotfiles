@@ -49,24 +49,32 @@ Gli strumenti globali sono dichiarati in [`mise/config.toml`](mise/config.toml).
 Attualmente sono gestiti:
 
 - `aws`: <https://aws.amazon.com/cli/>;
+- `bash-language-server`: <https://github.com/bash-lsp/bash-language-server>;
 - `composer`: <https://getcomposer.org/>;
 - `fd`: <https://github.com/sharkdp/fd>;
 - `fzf`: <https://github.com/junegunn/fzf>;
 - `gh`: <https://cli.github.com/>;
 - `glab`: <https://gitlab.com/gitlab-org/cli>;
 - `go`: <https://go.dev/>;
+- `gopls`: <https://go.dev/gopls/>;
 - `intelephense`: <https://intelephense.com/>;
 - `jq`: <https://jqlang.org/>;
 - `laravel-lsp`: <https://github.com/laravel/lsp>;
 - `lua-language-server`: <https://luals.github.io/>;
+- `marksman`: <https://github.com/artempyanykh/marksman>;
 - `neovim`: <https://neovim.io/>;
 - `node`: <https://nodejs.org/>;
 - `opencode`: <https://opencode.ai/>;
 - `rg`: <https://github.com/BurntSushi/ripgrep>;
+- `shellcheck`: <https://www.shellcheck.net/>;
+- `shfmt`: <https://github.com/mvdan/sh>;
 - `stylua`: <https://github.com/JohnnyMorganz/StyLua>;
+- `tailwindcss-language-server`: <https://github.com/tailwindlabs/tailwindcss-intellisense>;
+- `taplo`: <https://taplo.tamasfe.dev/>;
 - `typescript`: <https://www.typescriptlang.org/>;
 - `tree-sitter`: <https://tree-sitter.github.io/tree-sitter/>;
 - `uv`: <https://docs.astral.sh/uv/>;
+- `yaml-language-server`: <https://github.com/redhat-developer/yaml-language-server>;
 - `yt-dlp`: <https://github.com/yt-dlp/yt-dlp>.
 
 Per installarli o aggiornarli:
